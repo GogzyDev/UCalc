@@ -1,13 +1,9 @@
 export default {
   start: async () => {
-    const response = await fetch('UCalc/versions.json');
+    const response = await fetch('/UCalc/versions.json');
     if (!response.ok) {
-      response = await fetch('/versions.json')
-      if(!response.ok)
-      {
-        console.warn('Could not load versions.json');
-        return;
-      }
+      console.warn('Could not load versions.json');
+      return;
     }
 
     const versions = await response.json();
