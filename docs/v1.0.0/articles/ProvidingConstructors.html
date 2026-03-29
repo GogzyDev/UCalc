@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Providing Constructors | UCalc Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Providing Constructors | UCalc Documentation ">
+      
+      
+      <link rel="icon" href="../images/UC_icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Documentation~/docfx/articles/ProvidingConstructors.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/UC_icon.png" alt="UCalc">
+            UCalc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="providing-constructors">Providing Constructors</h1>
+
+<p>UCalc allows expressions to create objects using the <code>new</code> keyword.</p>
+<pre><code>new Vector3(x, y, z)
+</code></pre>
+<p>Constructors are provided through <strong>global symbol providers</strong>.<br>
+If you want to expose constructors for additional types, you need to create and register your own provider.</p>
+<hr>
+<h1 id="creating-a-constructor-provider">Creating a Constructor Provider</h1>
+<p>To provide constructors you need to implement:</p>
+<ul>
+<li><code>ISymbolProvider</code></li>
+<li><code>ISymbolEnumerator</code> (for editor autocomplete support)</li>
+</ul>
+<p>The provider is then registered globally using:</p>
+<pre><code class="lang-csharp">UCalcContextRegistry.RegisterGlobalProvider(provider);
+</code></pre>
+<p>This makes the constructors available to all expressions.</p>
+<hr>
+<h1 id="using-the-project-string-comparer">Using the Project String Comparer</h1>
+<p>To stay consistent with the rest of UCalc, you should use the string comparer defined in project settings.</p>
+<pre><code class="lang-csharp">UCalcProjectSettings.Instance.TokenComparer
+</code></pre>
+<p>This ensures constructor tokens behave consistently with the configured <strong>case sensitivity rules</strong>.</p>
+<hr>
+<h1 id="creating-constructor-symbols">Creating Constructor Symbols</h1>
+<p>To expose a constructor to UCalc you must create an <code>ExpressionConstructor</code>.</p>
+<p>The simplest way is to obtain a <code>ConstructorInfo</code> using reflection:</p>
+<pre><code class="lang-csharp">var ctor = typeof(MyType).GetConstructor(new [] { typeof(int), typeof(float) });
+var symbol = new ExpressionConstructor(ctor);
+</code></pre>
+<p>Once created, the symbol can be returned by your provider when the constructor token is requested.</p>
+<hr>
+<h1 id="example-provider">Example Provider</h1>
+<p>Below is a simplified example of a constructor provider that exposes constructors for several Unity types.</p>
+<pre><code class="lang-csharp">internal sealed class UnityConstructorsProvider : ISymbolProvider, ISymbolEnumerator
+{
+    private readonly Dictionary&lt;string, List&lt;ExpressionConstructor&gt;&gt; m_Constructors;
+    private readonly StringComparer m_Comparer;
+
+    public UnityConstructorsProvider(StringComparer comparer)
+    {
+        m_Comparer = comparer ?? StringComparer.Ordinal;
+        m_Constructors = new Dictionary&lt;string, List&lt;ExpressionConstructor&gt;&gt;(m_Comparer);
+
+        PopulateDefaults();
+    }
+
+    public bool TryGetArgument(string token, out Expression argOrConst)
+    {
+        argOrConst = null;
+        return false;
+    }
+
+    public bool TryGetProperty(string token, out ExpressionProperty parameter)
+    {
+        parameter = default;
+        return false;
+    }
+
+    public bool TryGetFunctions(string token, out IReadOnlyList&lt;ExpressionFunction&gt; overloads)
+    {
+        overloads = null;
+        return false;
+    }
+
+    public bool TryGetConstructors(string token, out IReadOnlyList&lt;ExpressionConstructor&gt; overloads)
+    {
+        if (m_Constructors.TryGetValue(token, out var list) &amp;&amp; list.Count &gt; 0)
+        {
+            overloads = list;
+            return true;
+        }
+
+        overloads = null;
+        return false;
+    }
+
+    public bool TryGetSubProvider(string token, out ISymbolProvider subProvider)
+    {
+        subProvider = null;
+        return false;
+    }
+}
+
+</code></pre>
+<p>This provider stores constructors in a dictionary keyed by the <strong>type token</strong>.</p>
+<hr>
+<h1 id="populating-constructors">Populating Constructors</h1>
+<p>Constructors are typically discovered using reflection:</p>
+<pre><code class="lang-csharp">private void AddConstructors(Type type)
+{
+    var ctors = type.GetConstructors(BindingFlags.Public | BindingFlags.Instance);
+
+    foreach (var c in ctors)
+    {
+        if (c.IsStatic) continue;
+        if (c.ContainsGenericParameters) continue;
+
+        list.Add(new ExpressionConstructor(c));
+    }
+}
+</code></pre>
+<p>Each constructor is wrapped in an <code>ExpressionConstructor</code>, which makes it recognizable by the UCalc compiler.</p>
+<hr>
+<h1 id="autocomplete-support">Autocomplete Support</h1>
+<p>To enable constructor suggestions in the editor, implement the enumeration methods from <code>ISymbolEnumerator</code>.</p>
+<p>Example:</p>
+<pre><code class="lang-csharp">public void EnumerateConstructors(List&lt;(string name, IReadOnlyList&lt;ExpressionConstructor&gt; overloads)&gt; dst)
+{
+    dst.AddRange(m_Constructors.Select(kvp =&gt; (kvp.Key, kvp.Value as IReadOnlyList&lt;ExpressionConstructor&gt;)));
+}
+</code></pre>
+<p>This allows the editor to display constructor suggestions while typing expressions.</p>
+<hr>
+<h1 id="result">Result</h1>
+<p>Once registered, constructors become available in expressions:</p>
+<pre><code>new Vector3(x, y, z)
+new Color(1, 0, 0)
+</code></pre>
+<p>The correct constructor overload is selected automatically based on argument types.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          made by GogzyDev
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct CompletionItem | UCalc Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct CompletionItem | UCalc Documentation ">
+      
+      <meta name="description" content="Represents a single auto-completion suggestion, including its replacement range, insertion text, and display metadata.">
+      <link rel="icon" href="../images/UC_icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/UC_icon.png" alt="UCalc">
+            UCalc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 class='section api' data-uid='UCalc.CompletionItem' data-commentid='T:UCalc.CompletionItem' id='UCalc_CompletionItem'>Struct CompletionItem    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/CompletionItem.cs#L6'><i class='bi bi-code-slash'></i></a></h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='UCalc.html'>UCalc</a></dd></dl>
+</div><p>Represents a single auto-completion suggestion, including its replacement range, insertion text, and display metadata.</p>
+<pre><code class='lang-csharp'>public readonly struct CompletionItem</code></pre><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='UCalc.CompletionItem.#ctor(UCalc.CompletionKind,System.Int32,System.Int32,System.String,System.String,System.String,System.String)' data-commentid='M:UCalc.CompletionItem.#ctor(UCalc.CompletionKind,System.Int32,System.Int32,System.String,System.String,System.String,System.String)' id='UCalc_CompletionItem__ctor_UCalc_CompletionKind_System_Int32_System_Int32_System_String_System_String_System_String_System_String_'>CompletionItem(CompletionKind, int, int, string, string, string, string)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/CompletionItem.cs#L43'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public CompletionItem(CompletionKind kind, int replaceStart, int replaceLength, string insertText, string displayText, string description = null, string detail = null)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>kind</code> <a href='UCalc.CompletionKind.html'>CompletionKind</a>  </dt>
+<dd>
+
+
+
+</dd><dt><code>replaceStart</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+
+</dd><dt><code>replaceLength</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+
+</dd><dt><code>insertText</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+
+</dd><dt><code>displayText</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+
+</dd><dt><code>description</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+
+</dd><dt><code>detail</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='UCalc.CompletionItem.Description' data-commentid='F:UCalc.CompletionItem.Description' id='UCalc_CompletionItem_Description'>Description    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/CompletionItem.cs#L36'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Gets an optional description of this completion item.</p>
+<pre><code class='lang-csharp'>public readonly string Description</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='UCalc.CompletionItem.Detail' data-commentid='F:UCalc.CompletionItem.Detail' id='UCalc_CompletionItem_Detail'>Detail    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/CompletionItem.cs#L41'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Gets optional secondary text for this completion item, such as a signature.</p>
+<pre><code class='lang-csharp'>public readonly string Detail</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='UCalc.CompletionItem.DisplayText' data-commentid='F:UCalc.CompletionItem.DisplayText' id='UCalc_CompletionItem_DisplayText'>DisplayText    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/CompletionItem.cs#L31'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Gets the text displayed for this completion item in the suggestions list.</p>
+<pre><code class='lang-csharp'>public readonly string DisplayText</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='UCalc.CompletionItem.InsertText' data-commentid='F:UCalc.CompletionItem.InsertText' id='UCalc_CompletionItem_InsertText'>InsertText    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/CompletionItem.cs#L26'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Gets the text inserted when this completion item is accepted.</p>
+<pre><code class='lang-csharp'>public readonly string InsertText</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='UCalc.CompletionItem.Kind' data-commentid='F:UCalc.CompletionItem.Kind' id='UCalc_CompletionItem_Kind'>Kind    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/CompletionItem.cs#L11'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Gets the kind of symbol represented by this completion item.</p>
+<pre><code class='lang-csharp'>public readonly CompletionKind Kind</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='UCalc.CompletionKind.html'>CompletionKind</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='UCalc.CompletionItem.ReplaceLength' data-commentid='F:UCalc.CompletionItem.ReplaceLength' id='UCalc_CompletionItem_ReplaceLength'>ReplaceLength    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/CompletionItem.cs#L21'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Gets the length of the text range to replace in the original expression.</p>
+<pre><code class='lang-csharp'>public readonly int ReplaceLength</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='UCalc.CompletionItem.ReplaceStart' data-commentid='F:UCalc.CompletionItem.ReplaceStart' id='UCalc_CompletionItem_ReplaceStart'>ReplaceStart    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/CompletionItem.cs#L16'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Gets the starting index of the text range to replace in the original expression.</p>
+<pre><code class='lang-csharp'>public readonly int ReplaceStart</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+
+</dd></dl>
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          made by GogzyDev
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

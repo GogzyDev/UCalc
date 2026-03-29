@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>UCalc | UCalc Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="UCalc | UCalc Documentation ">
+      
+      
+      <link rel="icon" href="images/UC_icon.png">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Documentation~/docfx/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/UC_icon.png" alt="UCalc">
+            UCalc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ucalc">UCalc</h1>
+
+<p><strong>UCalc</strong> is a lightweight and efficient expression parser designed specifically for <strong>Unity</strong>.<br>
+It allows you to <strong>serialize lambda expressions directly in the Unity Inspector</strong>, making it easy to expose customizable logic and calculations without writing additional scripts.</p>
+<p>UCalc integrates seamlessly with the Unity Editor and provides a powerful yet intuitive way to define expressions that are compiled into fast runtime delegates.</p>
+<hr>
+<h2 id="why-ucalc">Why UCalc?</h2>
+<p>UCalc makes it possible to move small pieces of logic into data by allowing expressions to be defined directly in serialized fields.</p>
+<p>Common use cases include:</p>
+<ul>
+<li><p><strong>Configurable formulas</strong><br>
+Example: damage calculations, score multipliers, stat scaling.</p>
+</li>
+<li><p><strong>Custom gameplay logic</strong><br>
+Designers can define simple rules without requiring new code.</p>
+</li>
+<li><p><strong>Advanced persistent events</strong><br>
+Go beyond what <code>UnityEvent</code> offers by allowing serialized lambda listeners.</p>
+</li>
+<li><p><strong>Data-driven systems</strong><br>
+Expressions can reference context objects, arguments, and dependencies.</p>
+</li>
+</ul>
+<hr>
+<h2 id="unity-editor-integration">Unity Editor Integration</h2>
+<p>UCalc is built with Unity workflows in mind.</p>
+<p>Features include:</p>
+<ul>
+<li>Serialized lambda expressions</li>
+<li>Expression validation</li>
+<li>Autocomplete support</li>
+<li>Reflection-based symbol discovery</li>
+<li>Integration with Unity objects and components</li>
+</ul>
+<p>Expressions are compiled into <strong>fast delegates</strong> using expression trees, ensuring runtime performance remains excellent.</p>
+<hr>
+<h2 id="example">Example</h2>
+<p>A serialized lambda can expose arguments and be written directly in the Inspector:</p>
+<p>health * damageMultiplier + bonusDamage</p>
+<p>At runtime this expression is compiled into a delegate equivalent to:</p>
+<pre><code class="lang-csharp">(float health, float damageMultiplier, float bonusDamage) =&gt; health * damageMultiplier + bonusDamage;
+</code></pre>
+<hr>
+<h2 id="community--support">Community &amp; Support</h2>
+<p>If you encounter issues or want to discuss the project:</p>
+<ul>
+<li><p>🐞 Report a bug: Bug Tracker</p>
+</li>
+<li><p>💬 Join discussions: Community Discussions</p>
+</li>
+<li><p>🛒 View on the Unity Asset Store: Asset Store Page</p>
+</li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          made by GogzyDev
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

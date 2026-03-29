@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TypeContext | UCalc Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TypeContext | UCalc Documentation ">
+      
+      <meta name="description" content="Provides symbols representing instance members of a specific type, including inherited members exposed through nested contexts for base types.">
+      <link rel="icon" href="../images/UC_icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/UC_icon.png" alt="UCalc">
+            UCalc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 class='section api' data-uid='UCalc.Core.TypeContext' data-commentid='T:UCalc.Core.TypeContext' id='UCalc_Core_TypeContext'>Class TypeContext    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L11'><i class='bi bi-code-slash'></i></a></h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='UCalc.Core.html'>UCalc.Core</a></dd></dl>
+</div><p>Provides symbols representing instance members of a specific type, including inherited members exposed through nested contexts for base types.</p>
+<pre><code class='lang-csharp'>public sealed class TypeContext : ISymbolProvider, ISymbolEnumerator</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
+</div>
+<div>
+<a href='UCalc.Core.TypeContext.html'>TypeContext</a>
+</div>
+
+</dd></dl><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='UCalc.Core.ISymbolProvider.html'>ISymbolProvider</a>
+</div>
+<div>
+<a href='UCalc.Core.ISymbolEnumerator.html'>ISymbolEnumerator</a>
+</div>
+
+</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='UCalc.Core.TypeContext.#ctor(System.Type,System.StringComparer,UCalc.Core.ContextPopulationMode)' data-commentid='M:UCalc.Core.TypeContext.#ctor(System.Type,System.StringComparer,UCalc.Core.ContextPopulationMode)' id='UCalc_Core_TypeContext__ctor_System_Type_System_StringComparer_UCalc_Core_ContextPopulationMode_'>TypeContext(Type, StringComparer, ContextPopulationMode)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L26'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public TypeContext(Type type, StringComparer comparer, ContextPopulationMode mode)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>type</code> <a href='https://learn.microsoft.com/dotnet/api/system.type'>Type</a>  </dt>
+<dd>
+
+
+
+</dd><dt><code>comparer</code> <a href='https://learn.microsoft.com/dotnet/api/system.stringcomparer'>StringComparer</a>  </dt>
+<dd>
+
+
+
+</dd><dt><code>mode</code> <a href='UCalc.Core.ContextPopulationMode.html'>ContextPopulationMode</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='UCalc.Core.TypeContext.AdditionalProviders' data-commentid='F:UCalc.Core.TypeContext.AdditionalProviders' id='UCalc_Core_TypeContext_AdditionalProviders'>AdditionalProviders    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L24'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public readonly List&lt;ISymbolProvider&gt; AdditionalProviders</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1'>List</a>&lt;<a href='UCalc.Core.ISymbolProvider.html'>ISymbolProvider</a>&gt;  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.Mode' data-commentid='F:UCalc.Core.TypeContext.Mode' id='UCalc_Core_TypeContext_Mode'>Mode    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L14'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public readonly ContextPopulationMode Mode</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='UCalc.Core.ContextPopulationMode.html'>ContextPopulationMode</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.RepresentedType' data-commentid='F:UCalc.Core.TypeContext.RepresentedType' id='UCalc_Core_TypeContext_RepresentedType'>RepresentedType    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L13'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public readonly Type RepresentedType</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.type'>Type</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='UCalc.Core.TypeContext.EnumerateArguments(System.Collections.Generic.List{System.ValueTuple{System.String,System.Linq.Expressions.ParameterExpression}})' data-commentid='M:UCalc.Core.TypeContext.EnumerateArguments(System.Collections.Generic.List{System.ValueTuple{System.String,System.Linq.Expressions.ParameterExpression}})' id='UCalc_Core_TypeContext_EnumerateArguments_System_Collections_Generic_List_System_ValueTuple_System_String_System_Linq_Expressions_ParameterExpression___'>EnumerateArguments(List&lt;(string name, ParameterExpression param)&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L234'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Enumerates argument symbols available in the context.</p>
+<pre><code class='lang-csharp'>public void EnumerateArguments(List&lt;(string name, ParameterExpression param)&gt; dst)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dst</code> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1'>List</a>&lt;(<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a> <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.linq.expressions.parameterexpression-.name'>name</a>, <a href='https://learn.microsoft.com/dotnet/api/system.linq.expressions.parameterexpression'>ParameterExpression</a> <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.linq.expressions.parameterexpression-.param'>param</a>)&gt;  </dt>
+<dd>
+
+
+<p>The destination list that receives argument entries.</p>
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.EnumerateConstructors(System.Collections.Generic.List{System.ValueTuple{System.String,System.Collections.Generic.IReadOnlyList{UCalc.Core.ExpressionConstructor}}})' data-commentid='M:UCalc.Core.TypeContext.EnumerateConstructors(System.Collections.Generic.List{System.ValueTuple{System.String,System.Collections.Generic.IReadOnlyList{UCalc.Core.ExpressionConstructor}}})' id='UCalc_Core_TypeContext_EnumerateConstructors_System_Collections_Generic_List_System_ValueTuple_System_String_System_Collections_Generic_IReadOnlyList_UCalc_Core_ExpressionConstructor____'>EnumerateConstructors(List&lt;(string name, IReadOnlyList&lt;ExpressionConstructor&gt; overloads)&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L272'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Enumerates constructors available in the context.</p>
+<pre><code class='lang-csharp'>public void EnumerateConstructors(List&lt;(string name, IReadOnlyList&lt;ExpressionConstructor&gt; overloads)&gt; dst)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dst</code> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1'>List</a>&lt;(<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a> <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.collections.generic.ireadonlylist-ucalc.core.expressionconstructor--.name'>name</a>, <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList</a>&lt;<a href='UCalc.Core.ExpressionConstructor.html'>ExpressionConstructor</a>&gt; <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.collections.generic.ireadonlylist-ucalc.core.expressionconstructor--.overloads'>overloads</a>)&gt;  </dt>
+<dd>
+
+
+<p>The destination list that receives constructor entries.</p>
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.EnumerateDependencies(System.Collections.Generic.List{System.ValueTuple{System.String,System.Linq.Expressions.ConstantExpression}})' data-commentid='M:UCalc.Core.TypeContext.EnumerateDependencies(System.Collections.Generic.List{System.ValueTuple{System.String,System.Linq.Expressions.ConstantExpression}})' id='UCalc_Core_TypeContext_EnumerateDependencies_System_Collections_Generic_List_System_ValueTuple_System_String_System_Linq_Expressions_ConstantExpression___'>EnumerateDependencies(List&lt;(string name, ConstantExpression const)&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L243'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Enumerates dependency constants available in the context.</p>
+<pre><code class='lang-csharp'>public void EnumerateDependencies(List&lt;(string name, ConstantExpression @const)&gt; dst)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dst</code> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1'>List</a>&lt;(<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a> <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.linq.expressions.constantexpression-.name'>name</a>, <a href='https://learn.microsoft.com/dotnet/api/system.linq.expressions.constantexpression'>ConstantExpression</a> <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.linq.expressions.constantexpression-.const'>const</a>)&gt;  </dt>
+<dd>
+
+
+<p>The destination list that receives dependency entries.</p>
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.EnumerateFunctions(System.Collections.Generic.List{System.ValueTuple{System.String,System.Collections.Generic.IReadOnlyList{UCalc.Core.ExpressionFunction}}})' data-commentid='M:UCalc.Core.TypeContext.EnumerateFunctions(System.Collections.Generic.List{System.ValueTuple{System.String,System.Collections.Generic.IReadOnlyList{UCalc.Core.ExpressionFunction}}})' id='UCalc_Core_TypeContext_EnumerateFunctions_System_Collections_Generic_List_System_ValueTuple_System_String_System_Collections_Generic_IReadOnlyList_UCalc_Core_ExpressionFunction____'>EnumerateFunctions(List&lt;(string name, IReadOnlyList&lt;ExpressionFunction&gt; overloads)&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L262'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Enumerates functions available in the context.</p>
+<pre><code class='lang-csharp'>public void EnumerateFunctions(List&lt;(string name, IReadOnlyList&lt;ExpressionFunction&gt; overloads)&gt; dst)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dst</code> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1'>List</a>&lt;(<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a> <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.collections.generic.ireadonlylist-ucalc.core.expressionfunction--.name'>name</a>, <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList</a>&lt;<a href='UCalc.Core.ExpressionFunction.html'>ExpressionFunction</a>&gt; <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.collections.generic.ireadonlylist-ucalc.core.expressionfunction--.overloads'>overloads</a>)&gt;  </dt>
+<dd>
+
+
+<p>The destination list that receives function entries.</p>
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.EnumerateProperties(System.Collections.Generic.List{System.ValueTuple{System.String,UCalc.Core.ExpressionProperty}})' data-commentid='M:UCalc.Core.TypeContext.EnumerateProperties(System.Collections.Generic.List{System.ValueTuple{System.String,UCalc.Core.ExpressionProperty}})' id='UCalc_Core_TypeContext_EnumerateProperties_System_Collections_Generic_List_System_ValueTuple_System_String_UCalc_Core_ExpressionProperty___'>EnumerateProperties(List&lt;(string name, ExpressionProperty parameter)&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L252'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Enumerates properties and fields available in the context.</p>
+<pre><code class='lang-csharp'>public void EnumerateProperties(List&lt;(string name, ExpressionProperty parameter)&gt; dst)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dst</code> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1'>List</a>&lt;(<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a> <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,ucalc.core.expressionproperty-.name'>name</a>, <a href='UCalc.Core.ExpressionProperty.html'>ExpressionProperty</a> <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,ucalc.core.expressionproperty-.parameter'>parameter</a>)&gt;  </dt>
+<dd>
+
+
+<p>The destination list that receives property entries.</p>
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.EnumerateSubProviers(System.Collections.Generic.List{System.ValueTuple{System.String,UCalc.Core.ISymbolProvider}})' data-commentid='M:UCalc.Core.TypeContext.EnumerateSubProviers(System.Collections.Generic.List{System.ValueTuple{System.String,UCalc.Core.ISymbolProvider}})' id='UCalc_Core_TypeContext_EnumerateSubProviers_System_Collections_Generic_List_System_ValueTuple_System_String_UCalc_Core_ISymbolProvider___'>EnumerateSubProviers(List&lt;(string name, ISymbolProvider subProvider)&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L282'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Enumerates nested symbol providers available in the context.</p>
+<pre><code class='lang-csharp'>public void EnumerateSubProviers(List&lt;(string name, ISymbolProvider subProvider)&gt; dst)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dst</code> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1'>List</a>&lt;(<a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a> <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,ucalc.core.isymbolprovider-.name'>name</a>, <a href='UCalc.Core.ISymbolProvider.html'>ISymbolProvider</a> <a href='https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,ucalc.core.isymbolprovider-.subprovider'>subProvider</a>)&gt;  </dt>
+<dd>
+
+
+<p>The destination list that receives sub-provider entries.</p>
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.PopulateEager' data-commentid='M:UCalc.Core.TypeContext.PopulateEager' id='UCalc_Core_TypeContext_PopulateEager'>PopulateEager()    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L42'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public void PopulateEager()</code></pre><h3 class='section api' data-uid='UCalc.Core.TypeContext.TryGetArgument(System.String,System.Linq.Expressions.Expression@)' data-commentid='M:UCalc.Core.TypeContext.TryGetArgument(System.String,System.Linq.Expressions.Expression@)' id='UCalc_Core_TypeContext_TryGetArgument_System_String_System_Linq_Expressions_Expression__'>TryGetArgument(string, out Expression)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L94'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Attempts to resolve an argument or constant with the specified token.</p>
+<pre><code class='lang-csharp'>public bool TryGetArgument(string token, out Expression argOrConst)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>token</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+<p>The symbol token to resolve.</p>
+
+</dd><dt><code>argOrConst</code> <a href='https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression'>Expression</a>  </dt>
+<dd>
+
+
+<p>The resolved argument or constant expression.</p>
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
+
+
+<p><code>true</code> if the symbol was found; otherwise <code>false</code>.</p>
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.TryGetConstructors(System.String,System.Collections.Generic.IReadOnlyList{UCalc.Core.ExpressionConstructor}@)' data-commentid='M:UCalc.Core.TypeContext.TryGetConstructors(System.String,System.Collections.Generic.IReadOnlyList{UCalc.Core.ExpressionConstructor}@)' id='UCalc_Core_TypeContext_TryGetConstructors_System_String_System_Collections_Generic_IReadOnlyList_UCalc_Core_ExpressionConstructor___'>TryGetConstructors(string, out IReadOnlyList&lt;ExpressionConstructor&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L156'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Attempts to resolve constructor overloads with the specified token.</p>
+<pre><code class='lang-csharp'>public bool TryGetConstructors(string token, out IReadOnlyList&lt;ExpressionConstructor&gt; overloads)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>token</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+<p>The symbol token to resolve.</p>
+
+</dd><dt><code>overloads</code> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList</a>&lt;<a href='UCalc.Core.ExpressionConstructor.html'>ExpressionConstructor</a>&gt;  </dt>
+<dd>
+
+
+<p>The available constructor overloads.</p>
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
+
+
+<p><code>true</code> if the symbol was found; otherwise <code>false</code>.</p>
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.TryGetFunctions(System.String,System.Collections.Generic.IReadOnlyList{UCalc.Core.ExpressionFunction}@)' data-commentid='M:UCalc.Core.TypeContext.TryGetFunctions(System.String,System.Collections.Generic.IReadOnlyList{UCalc.Core.ExpressionFunction}@)' id='UCalc_Core_TypeContext_TryGetFunctions_System_String_System_Collections_Generic_IReadOnlyList_UCalc_Core_ExpressionFunction___'>TryGetFunctions(string, out IReadOnlyList&lt;ExpressionFunction&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L126'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Attempts to resolve function overloads with the specified token.</p>
+<pre><code class='lang-csharp'>public bool TryGetFunctions(string token, out IReadOnlyList&lt;ExpressionFunction&gt; overloads)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>token</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+<p>The symbol token to resolve.</p>
+
+</dd><dt><code>overloads</code> <a href='https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1'>IReadOnlyList</a>&lt;<a href='UCalc.Core.ExpressionFunction.html'>ExpressionFunction</a>&gt;  </dt>
+<dd>
+
+
+<p>The available function overloads.</p>
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
+
+
+<p><code>true</code> if the symbol was found; otherwise <code>false</code>.</p>
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.TryGetProperty(System.String,UCalc.Core.ExpressionProperty@)' data-commentid='M:UCalc.Core.TypeContext.TryGetProperty(System.String,UCalc.Core.ExpressionProperty@)' id='UCalc_Core_TypeContext_TryGetProperty_System_String_UCalc_Core_ExpressionProperty__'>TryGetProperty(string, out ExpressionProperty)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L100'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Attempts to resolve a property or field accessible through the specified token.</p>
+<pre><code class='lang-csharp'>public bool TryGetProperty(string token, out ExpressionProperty parameter)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>token</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+<p>The symbol token to resolve.</p>
+
+</dd><dt><code>parameter</code> <a href='UCalc.Core.ExpressionProperty.html'>ExpressionProperty</a>  </dt>
+<dd>
+
+
+<p>The resolved property metadata.</p>
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
+
+
+<p><code>true</code> if the symbol was found; otherwise <code>false</code>.</p>
+
+</dd></dl><h3 class='section api' data-uid='UCalc.Core.TypeContext.TryGetSubProvider(System.String,UCalc.Core.ISymbolProvider@)' data-commentid='M:UCalc.Core.TypeContext.TryGetSubProvider(System.String,UCalc.Core.ISymbolProvider@)' id='UCalc_Core_TypeContext_TryGetSubProvider_System_String_UCalc_Core_ISymbolProvider__'>TryGetSubProvider(string, out ISymbolProvider)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/Core/Providers/TypeContext.cs#L162'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Attempts to resolve a nested symbol provider with the specified token.</p>
+<pre><code class='lang-csharp'>public bool TryGetSubProvider(string token, out ISymbolProvider subProvider)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>token</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+<p>The symbol token to resolve.</p>
+
+</dd><dt><code>subProvider</code> <a href='UCalc.Core.ISymbolProvider.html'>ISymbolProvider</a>  </dt>
+<dd>
+
+
+<p>The resolved sub-provider.</p>
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
+
+
+<p><code>true</code> if the symbol was found; otherwise <code>false</code>.</p>
+
+</dd></dl>
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          made by GogzyDev
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

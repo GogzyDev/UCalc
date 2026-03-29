@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UCalcCompletionEngine | UCalc Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UCalcCompletionEngine | UCalc Documentation ">
+      
+      <meta name="description" content="Provides auto-completion suggestions for expressions using the same symbol provider and parser options as the compiler.">
+      <link rel="icon" href="../images/UC_icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/UC_icon.png" alt="UCalc">
+            UCalc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 class='section api' data-uid='UCalc.UCalcCompletionEngine' data-commentid='T:UCalc.UCalcCompletionEngine' id='UCalc_UCalcCompletionEngine'>Class UCalcCompletionEngine    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/UCalcCompletionEngine.cs#L12'><i class='bi bi-code-slash'></i></a></h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='UCalc.html'>UCalc</a></dd></dl>
+</div><p>Provides auto-completion suggestions for expressions using the same symbol provider and parser options as the compiler.</p>
+<pre><code class='lang-csharp'>public sealed class UCalcCompletionEngine</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
+</div>
+<div>
+<a href='UCalc.UCalcCompletionEngine.html'>UCalcCompletionEngine</a>
+</div>
+
+</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='UCalc.UCalcCompletionEngine.#ctor(UCalc.Core.ISymbolProvider,UCalc.Core.UCalcParserOptions)' data-commentid='M:UCalc.UCalcCompletionEngine.#ctor(UCalc.Core.ISymbolProvider,UCalc.Core.UCalcParserOptions)' id='UCalc_UCalcCompletionEngine__ctor_UCalc_Core_ISymbolProvider_UCalc_Core_UCalcParserOptions_'>UCalcCompletionEngine(ISymbolProvider, UCalcParserOptions)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/UCalcCompletionEngine.cs#L24'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public UCalcCompletionEngine(ISymbolProvider rootContext, UCalcParserOptions parserOptions)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>rootContext</code> <a href='UCalc.Core.ISymbolProvider.html'>ISymbolProvider</a>  </dt>
+<dd>
+
+
+
+</dd><dt><code>parserOptions</code> <a href='UCalc.Core.UCalcParserOptions.html'>UCalcParserOptions</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='UCalc.UCalcCompletionEngine.GetCompletions(System.String,System.Int32)' data-commentid='M:UCalc.UCalcCompletionEngine.GetCompletions(System.String,System.Int32)' id='UCalc_UCalcCompletionEngine_GetCompletions_System_String_System_Int32_'>GetCompletions(string, int)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/UCalcCompletionEngine.cs#L51'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Returns auto-completion suggestions for the specified expression text at the given caret position.</p>
+<pre><code class='lang-csharp'>public AutocompleteResult GetCompletions(string text, int caretIndex)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>text</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
+
+
+
+</dd><dt><code>caretIndex</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='UCalc.AutocompleteResult.html'>AutocompleteResult</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='UCalc.UCalcCompletionEngine.SetContext(UCalc.Core.ISymbolProvider)' data-commentid='M:UCalc.UCalcCompletionEngine.SetContext(UCalc.Core.ISymbolProvider)' id='UCalc_UCalcCompletionEngine_SetContext_UCalc_Core_ISymbolProvider_'>SetContext(ISymbolProvider)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/UCalcCompletionEngine.cs#L33'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Sets the root symbol provider used to resolve symbols for auto-completion.</p>
+<pre><code class='lang-csharp'>public void SetContext(ISymbolProvider rootContext)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>rootContext</code> <a href='UCalc.Core.ISymbolProvider.html'>ISymbolProvider</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='UCalc.UCalcCompletionEngine.SetOptions(UCalc.Core.UCalcParserOptions)' data-commentid='M:UCalc.UCalcCompletionEngine.SetOptions(UCalc.Core.UCalcParserOptions)' id='UCalc_UCalcCompletionEngine_SetOptions_UCalc_Core_UCalcParserOptions_'>SetOptions(UCalcParserOptions)    <a class='header-action link-secondary' title='View source' href='https://github.com/GogzyDev/com.gogzydev.ucalc/blob/main/Runtime/AutoCompletion/UCalcCompletionEngine.cs#L42'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Sets the parser options that control how expressions are interpreted during auto-completion.</p>
+<pre><code class='lang-csharp'>public void SetOptions(UCalcParserOptions options)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>options</code> <a href='UCalc.Core.UCalcParserOptions.html'>UCalcParserOptions</a>  </dt>
+<dd>
+
+
+
+</dd></dl>
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          made by GogzyDev
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

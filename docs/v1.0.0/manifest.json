@@ -1,0 +1,821 @@
+{
+  "source_base_path": "F:/Unity/Projects/NoesisDemo/Packages/com.gogzydev.ucalc/Documentation~/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.ArgNamesAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.ArgNamesAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.AutocompleteResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.AutocompleteResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.CompletionItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.CompletionItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.CompletionKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.CompletionKind.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.BinaryExpressionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.BinaryExpressionNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.BinaryOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.BinaryOperator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.CompilationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.CompilationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.ConstructorExpressionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.ConstructorExpressionNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.ContextPopulationMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.ContextPopulationMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.ExpressionConstructor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.ExpressionConstructor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.ExpressionFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.ExpressionFunction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.ExpressionOwnedContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.ExpressionOwnedContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.ExpressionProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.ExpressionProperty.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.ExpressionPropertyMemberKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.ExpressionPropertyMemberKind.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.FunctionExpressionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.FunctionExpressionNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.GlobalContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.GlobalContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.IIDentifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.IIDentifier.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.IIDentifierConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.IIDentifierConsumer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.ISymbolEnumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.ISymbolEnumerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.ISymbolProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.ISymbolProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.IdentifierExpressionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.IdentifierExpressionNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.IndexExpressionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.IndexExpressionNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.LiteralExpressionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.LiteralExpressionNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.LiteralKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.LiteralKind.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.LogicalExpressionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.LogicalExpressionNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.TernaryExpressionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.TernaryExpressionNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.TypeContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.TypeContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.UCalcParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.UCalcParser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.UCalcParserOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.UCalcParserOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.UnaryExpressionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.UnaryExpressionNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.UnaryOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.UnaryOperator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.Core.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.EmptyExpressionException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.EmptyExpressionException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.IUCalcMemberFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.IUCalcMemberFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.SerializedAction-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.SerializedAction-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.SerializedAction-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.SerializedAction-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.SerializedAction-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.SerializedAction-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.SerializedAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.SerializedAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.SerializedFunc-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.SerializedFunc-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.SerializedFunc-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.SerializedFunc-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.SerializedFunc-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.SerializedFunc-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.SerializedLambda-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.SerializedLambda-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.SerializedLambda.DependencyKVP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.SerializedLambda.DependencyKVP.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.SerializedLambda.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.SerializedLambda.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcCompletionEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcCompletionEngine.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcCompletionFormatting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcCompletionFormatting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcContextRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcContextRegistry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcEvent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcEvent-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcEvent-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcEvent-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcEvent-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcEvent-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcEventBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcEventBase-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcGlobalContextAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcGlobalContextAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcHiddenAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcHiddenAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcMemberFilterRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcMemberFilterRegistry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcProjectSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcProjectSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.UCalcReadOnlyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.UCalcReadOnlyAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "api/UCalc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UCalc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/ControllingSymbolDiscovery.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/ControllingSymbolDiscovery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/ExpressionSyntax.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/ExpressionSyntax.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/GettingStarted.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/GettingStarted.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/GlobalSymbols.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/GlobalSymbols.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/ProjectSettings.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/ProjectSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/ProvidingConstructors.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/ProvidingConstructors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/UC_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/UC_icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/UC_icon.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/UC_icon.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/autocomplete-example.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/autocomplete-example.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/dependencies-panel.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/dependencies-panel.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/expression-error.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/expression-error.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/inspector-expression-field.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/inspector-expression-field.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/project-settings-ucalc.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/project-settings-ucalc.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample-basic-usage-component.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample-basic-usage-component.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sample-basic-usage-scene.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/sample-basic-usage-scene.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "samples/BasicUsage.md",
+      "output": {
+        ".html": {
+          "relative_path": "samples/BasicUsage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "samples/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "samples/toc.html"
+        },
+        ".json": {
+          "relative_path": "samples/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace UCalc.Core | UCalc Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace UCalc.Core | UCalc Documentation ">
+      
+      
+      <link rel="icon" href="../images/UC_icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/UC_icon.png" alt="UCalc">
+            UCalc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 class='section api' data-uid='UCalc.Core' data-commentid='N:UCalc.Core' id='UCalc_Core'>Namespace UCalc.Core   </h1>
+ <h3 class='section'>Classes</h3><dl class='parameters'><dt> <a href='UCalc.Core.BinaryExpressionNode.html'>BinaryExpressionNode</a>  </dt>
+<dd>
+
+
+<p>Represents an expression composed of two operands and a binary operator.</p>
+
+</dd><dt> <a href='UCalc.Core.CompilationExtensions.html'>CompilationExtensions</a>  </dt>
+<dd>
+
+
+<p>Provides helper methods for expression compilation, type conversion, member access, delegate creation, and overload resolution.</p>
+
+</dd><dt> <a href='UCalc.Core.ConstructorExpressionNode.html'>ConstructorExpressionNode</a>  </dt>
+<dd>
+
+
+<p>Represents an expression that creates a new object instance using a constructor.</p>
+
+</dd><dt> <a href='UCalc.Core.ExpressionOwnedContext.html'>ExpressionOwnedContext</a>  </dt>
+<dd>
+
+
+<p>Provides symbols for an expression bound to a specific owner, including the owner's type context, expression arguments, and additional dependencies.</p>
+
+</dd><dt> <a href='UCalc.Core.FunctionExpressionNode.html'>FunctionExpressionNode</a>  </dt>
+<dd>
+
+
+<p>Represents a function call expression with a target identifier and argument expressions.</p>
+
+</dd><dt> <a href='UCalc.Core.GlobalContext.html'>GlobalContext</a>  </dt>
+<dd>
+
+
+<p>Provides symbols representing globally accessible static members available to all expressions.</p>
+
+</dd><dt> <a href='UCalc.Core.IdentifierExpressionNode.html'>IdentifierExpressionNode</a>  </dt>
+<dd>
+
+
+<p>Represents an identifier used to reference a symbol within the expression context.</p>
+
+</dd><dt> <a href='UCalc.Core.IndexExpressionNode.html'>IndexExpressionNode</a>  </dt>
+<dd>
+
+
+<p>Represents an index access expression used to access elements through an indexer.</p>
+
+</dd><dt> <a href='UCalc.Core.LiteralExpressionNode.html'>LiteralExpressionNode</a>  </dt>
+<dd>
+
+
+<p>Represents a literal value within an expression, including the default keyword.</p>
+
+</dd><dt> <a href='UCalc.Core.LogicalExpressionNode.html'>LogicalExpressionNode</a>  </dt>
+<dd>
+
+
+<p>Base class for all expression syntax tree nodes representing parsed expressions.</p>
+
+</dd><dt> <a href='UCalc.Core.TernaryExpressionNode.html'>TernaryExpressionNode</a>  </dt>
+<dd>
+
+
+<p>Represents a conditional expression that selects between two values based on a condition.</p>
+
+</dd><dt> <a href='UCalc.Core.TypeContext.html'>TypeContext</a>  </dt>
+<dd>
+
+
+<p>Provides symbols representing instance members of a specific type, including inherited members exposed through nested contexts for base types.</p>
+
+</dd><dt> <a href='UCalc.Core.UCalcParser.html'>UCalcParser</a>  </dt>
+<dd>
+
+
+<p>Provides methods for creating, caching, and retrieving expression parser instances configured with specific parsing options.</p>
+
+</dd><dt> <a href='UCalc.Core.UnaryExpressionNode.html'>UnaryExpressionNode</a>  </dt>
+<dd>
+
+
+<p>Represents an expression composed of a single operand and a unary operator.</p>
+
+</dd></dl><h3 class='section'>Structs</h3><dl class='parameters'><dt> <a href='UCalc.Core.ExpressionConstructor.html'>ExpressionConstructor</a>  </dt>
+<dd>
+
+
+<p>Represents metadata describing a constructor that can be invoked within an expression.</p>
+
+</dd><dt> <a href='UCalc.Core.ExpressionFunction.html'>ExpressionFunction</a>  </dt>
+<dd>
+
+
+<p>Represents metadata describing a method that can be invoked within an expression.</p>
+
+</dd><dt> <a href='UCalc.Core.ExpressionProperty.html'>ExpressionProperty</a>  </dt>
+<dd>
+
+
+<p>Represents metadata describing a field or property that can be accessed within an expression.</p>
+
+</dd><dt> <a href='UCalc.Core.UCalcParserOptions.html'>UCalcParserOptions</a>  </dt>
+<dd>
+
+
+<p>Defines configuration options used by the expression parser.</p>
+
+</dd></dl><h3 class='section'>Interfaces</h3><dl class='parameters'><dt> <a href='UCalc.Core.IIDentifier.html'>IIDentifier</a>  </dt>
+<dd>
+
+
+
+</dd><dt> <a href='UCalc.Core.IIDentifierConsumer.html'>IIDentifierConsumer</a>  </dt>
+<dd>
+
+
+<p>Marker for <span class="xref">UCalc.Core.LogicalExpressionNode</span> that consumes identifier instead of compiling it.</p>
+
+</dd><dt> <a href='UCalc.Core.ISymbolEnumerator.html'>ISymbolEnumerator</a>  </dt>
+<dd>
+
+
+<p>Defines methods used to enumerate symbols exposed by a provider for auto-completion.</p>
+
+</dd><dt> <a href='UCalc.Core.ISymbolProvider.html'>ISymbolProvider</a>  </dt>
+<dd>
+
+
+<p>Defines a provider that resolves symbols used during expression compilation.</p>
+
+</dd></dl><h3 class='section'>Enums</h3><dl class='parameters'><dt> <a href='UCalc.Core.BinaryOperator.html'>BinaryOperator</a>  </dt>
+<dd>
+
+
+
+</dd><dt> <a href='UCalc.Core.ContextPopulationMode.html'>ContextPopulationMode</a>  </dt>
+<dd>
+
+
+
+</dd><dt> <a href='UCalc.Core.ExpressionPropertyMemberKind.html'>ExpressionPropertyMemberKind</a>  </dt>
+<dd>
+
+
+<p>Specifies the kind of member represented by an expression property.</p>
+
+</dd><dt> <a href='UCalc.Core.LiteralKind.html'>LiteralKind</a>  </dt>
+<dd>
+
+
+
+</dd><dt> <a href='UCalc.Core.UnaryOperator.html'>UnaryOperator</a>  </dt>
+<dd>
+
+
+
+</dd></dl>
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          made by GogzyDev
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
